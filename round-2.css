@@ -1,0 +1,124 @@
+body {
+  background-color: rgb(38, 56, 158);
+}
+
+.top1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: center;
+  color: white;
+}
+
+.top1 {
+  font-size: 5rem;
+}
+
+.top2 {
+  font-size: 2rem;
+}
+
+.top2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodygrid {
+  display: grid;
+  width: 90%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 90%;
+}
+
+.text1 {
+  text-align: center;
+  background-color: violet;
+  margin: 0;
+  border: black 1px solid;
+  padding: 2%;
+}
+
+.cat {
+  background-color: grey;
+}
+
+.usercont {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.twocont {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.guesscont {
+  background-color: lightgray;
+  width: 10%;
+}
+
+.guess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.passcont {
+  background-color: lightgray;
+  width: 10%;
+  text-align: center;
+}
+
+.pass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.playercont {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  gap: 50vw;
+  color: gold;
+}
+
+.more {
+  display: flex;
+  justify-content: end;
+  margin-right: 20%;
+  margin-top: 10%;
+}
+.nxtcont {
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+  justify-content: center;
+  padding: 1.5%;
+}
+
+.lots {
+  display: flex;
+  justify-content: center;
+}
+.footercont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 10%;
+  background-color: lightgray;
+  width: 50%;
+  text-decoration: underline;
+}
