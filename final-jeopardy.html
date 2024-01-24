@@ -12,21 +12,29 @@
     <div class="top1">
       <h1 class="bigger">Final Round</h1>
     </div>
-    <div class="top2">
+    <!-- <div class="top2">
       <h1 class="smaller">Player Turn</h1>
-    </div>
+    </div> -->
     <div class="fincont">
       <p class="pfinal">Final Category</p>
     </div>
     <div class="quescont">
       <p class="fq">Final Question</p>
     </div>
-    <div class="inputcont">
+    <!-- <div class="inputcont">
       <input class="inp" placeholder="Point bet amount..."></input>
       <input class="inp" placeholder="Final answer..."></input>
     </div>
     <div class="cont1">
       <p class="pcont">Bet</p>
+    </div> -->
+    <div class="playercont">
+      <p class="player1">Player 1 Score
+        <span id="score1">0</span>
+      </p>
+      <p class="player2">Player 2 Score
+        <span id="score2">0</span>
+      </p>
     </div>
     <div class="lots">
       <div class="footercont">
@@ -34,8 +42,47 @@
         <p class="footer">Contact</p>
       </div>
     </div>
+    
+    
+
+    <dialog id="diag1">
+      <p id="bet1">Place your bet, Player 1.</p>
+        <input id="inp1" placeholder="Point bet amount..."></input>
+        <!-- <input id="answer" placeholder="Final answer..."></input> -->
+        <button id="pcont1">Bet</button>
+    </dialog>
+
+
+
+
+    <dialog id="diag2">
+      <p id="bet2">Place your bet, Player 1.</p>
+      <input id="inp" placeholder="Point bet amount..."></input>
+      <!-- <input id="answer" placeholder="Final answer..."></input> -->
+      <button id="pcont">Bet</button>
+  </dialog>
+
+
+
+  <dialog id="diag3">
+    <input id="inp" placeholder="Point bet amount..."></input>
+    <!-- <input id="answer" placeholder="Final answer..."></input> -->
+    <button id="pcont">Bet</button>
+</dialog>
+
+
+
+
+  <dialog id="diag4">
+    <input id="inp" placeholder="Point bet amount..."></input>
+    <!-- <input id="answer" placeholder="Final answer..."></input> -->
+    <button id="pcont">Bet</button>
+</dialog>
+
+
+
 
     <!-- Do not change the script source. Allows import/export to work. -->
-    <script src="./scripts/index.js" type="module"></script>
+    <script src="./scripts/final.js" type="module"></script>
   </body>
 </html>

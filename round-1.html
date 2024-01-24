@@ -16,68 +16,61 @@
     </div>
     <main class="bodygrid">
       <div class="cc column1">
-        <p class="text1 cat">Category</p>
+        <p class="text1 cat">Nature</p>
         <p class="text1 click" id="question1_cat1">200</p>
-        <p class="text1 click" id="question_cat2">400</p>
-        <p class="text1 click">600</p>
-        <p class="text1 click">800</p>
-        <p class="text1 click">1000</p>
+        <p class="text1 click" id="question2_cat1">400</p>
+        <p class="text1 click" id="question3_cat1">600</p>
+        <p class="text1 click" id="question4_cat1">800</p>
+        <p class="text1 click" id="question5_cat1">1000</p>
       </div>
       <div class="cc column2">
-        <p class="text1 cat">Category</p>
-        <p class="text1 click">200</p>
-        <p class="text1 click">400</p>
-        <p class="text1 click">600</p>
-        <p class="text1 click">800</p>
-        <p class="text1 click">1000</p>
+        <p class="text1 cat">Animals</p>
+        <p class="text1 click" id="question1_cat2">200</p>
+        <p class="text1 click" id="question2_cat2">400</p>
+        <p class="text1 click" id="question3_cat2">600</p>
+        <p class="text1 click" id="question4_cat2">800</p>
+        <p class="text1 click" id="question5_cat2">1000</p>
       </div>
       <div class="cc column3">
-        <p class="text1 cat">Category</p>
-        <p class="text1 click">200</p>
-        <p class="text1 click">400</p>
-        <p class="text1 click">600</p>
-        <p class="text1 click">800</p>
-        <p class="text1 click">1000</p>
+        <p class="text1 cat">Computers</p>
+        <p class="text1 click" id="question1_cat3">200</p>
+        <p class="text1 click" id="question2_cat3">400</p>
+        <p class="text1 click" id="question3_cat3">600</p>
+        <p class="text1 click" id="question4_cat3">800</p>
+        <p class="text1 click" id="question5_cat3">1000</p>
       </div>
       <div class="cc column4">
-        <p class="text1 cat">Category</p>
-        <p class="text1 click">200</p>
-        <p class="text1 click">400</p>
-        <p class="text1 click">600</p>
-        <p class="text1 click">800</p>
-        <p class="text1 click">1000</p>
+        <p class="text1 cat">Mythology</p>
+        <p class="text1 click" id="question1_cat4">200</p>
+        <p class="text1 click" id="question2_cat4">400</p>
+        <p class="text1 click" id="question3_cat4">600</p>
+        <p class="text1 click" id="question4_cat4">800</p>
+        <p class="text1 click" id="question5_cat4">1000</p>
       </div>
       <div class="cc column5">
-        <p class="text1 cat">Category</p>
-        <p class="text1 click">200</p>
-        <p class="text1 click">400</p>
-        <p class="text1 click">600</p>
-        <p class="text1 click">800</p>
-        <p class="text1 click">1000</p>
+        <p class="text1 cat">History</p>
+        <p class="text1 click" id="question1_cat5">200</p>
+        <p class="text1 click" id="question2_cat5">400</p>
+        <p class="text1 click" id="question3_cat5">600</p>
+        <p class="text1 click" id="question4_cat5">800</p>
+        <p class="text1 click" id="question5_cat5">1000</p>
       </div>
       <div class="cc column6">
-        <p class="text1 cat">Category</p>
-        <p class="text1 click">200</p>
-        <p class="text1 click">400</p>
-        <p class="text1 click">600</p>
-        <p class="text1 click">800</p>
-        <p class="text1 click">1000</p>
+        <p class="text1 cat">General</p>
+        <p class="text1 click" id="question1_cat6">200</p>
+        <p class="text1 click" id="question2_cat6">400</p>
+        <p class="text1 click" id="question3_cat6">600</p>
+        <p class="text1 click" id="question4_cat6">800</p>
+        <p class="text1 click" id="question5_cat6">1000</p>
       </div>
     </main>
-    <div class="usercont">
-      <input class="user" placeholder="User input..."></input>
-    </div>
-    <div class="twocont">
-    <div class="guesscont">
-      <a class="guess" href="">Guess</p>
-    </div>
-    <div class="passcont">
-      <a class="pass" href="">Pass</p>
-    </div>
-    </div>
     <div class="playercont">
-      <p class="player1">Player 1 Score: 0</p>
-      <p class="player2">Player 2 Score: 0</p>
+      <p class="player1">Player 1 Score
+        <span id="score1">0</span>
+      </p>
+      <p class="player2">Player 2 Score
+        <span id="score2">0</span>
+      </p>
     </div>
   <div class="more">
     <div class="nxtcont">
@@ -93,13 +86,18 @@
     </div>
   </div>
 
-  <!-- <div>
-    <h2 id="header">Turn</h2>
-    <p id="turn">It is player 1's turn!</p>
-    <button id="turnbtn">Close</button>
-  </div> -->
-
-    <!-- Do not change the script source. Allows import/export to work. -->
-    <script src="./index.js"  type="module"></script>
+  <dialog id="diag">
+    <div id="diagquestion">test</div>
+    <div class="usercont">
+      <input id="user" placeholder="User input..."></input>
+    </div>
+    <div class="twocont">
+      <button class="diagf" id="guess">Guess</button>
+      <button class="diagf" id="pass">Pass</button>
+    </div>
+  </dialog>
+  
+  <!-- Do not change the script source. Allows import/export to work. -->
+    <script src="./scripts/round1.js"  type="module"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeopardy</title>
-    <link rel="stylesheet" href="./round-2.css" />
+    <link rel="stylesheet" href="./round-1.css" />
   </head>
   <body>
     <div class="top1">
@@ -16,68 +16,61 @@
     </div>
     <main class="bodygrid">
       <div class="cc column1">
-        <p class="text1 cat">Category</p>
-        <p class="text1">400</p>
-        <p class="text1">800</p>
-        <p class="text1">1200</p>
-        <p class="text1">1600</p>
-        <p class="text1">2000</p>
+        <p class="text1 cat">Nature</p>
+        <p class="text1 click" id="question6_cat1">200</p>
+        <p class="text1 click" id="question7_cat1">400</p>
+        <p class="text1 click" id="question8_cat1">600</p>
+        <p class="text1 click" id="question9_cat1">800</p>
+        <p class="text1 click" id="question10_cat1">1000</p>
       </div>
       <div class="cc column2">
-        <p class="text1 cat">Category</p>
-        <p class="text1">400</p>
-        <p class="text1">800</p>
-        <p class="text1">1200</p>
-        <p class="text1">1600</p>
-        <p class="text1">2000</p>
+        <p class="text1 cat">Animals</p>
+        <p class="text1 click" id="question6_cat2">200</p>
+        <p class="text1 click" id="question7_cat2">400</p>
+        <p class="text1 click" id="question8_cat2">600</p>
+        <p class="text1 click" id="question9_cat2">800</p>
+        <p class="text1 click" id="question10_cat2">1000</p>
       </div>
       <div class="cc column3">
-        <p class="text1 cat">Category</p>
-        <p class="text1">400</p>
-        <p class="text1">800</p>
-        <p class="text1">1200</p>
-        <p class="text1">1600</p>
-        <p class="text1">2000</p>
+        <p class="text1 cat">Computers</p>
+        <p class="text1 click" id="question6_cat3">200</p>
+        <p class="text1 click" id="question7_cat3">400</p>
+        <p class="text1 click" id="question8_cat3">600</p>
+        <p class="text1 click" id="question9_cat3">800</p>
+        <p class="text1 click" id="question10_cat3">1000</p>
       </div>
       <div class="cc column4">
-        <p class="text1 cat">Category</p>
-        <p class="text1">400</p>
-        <p class="text1">800</p>
-        <p class="text1">1200</p>
-        <p class="text1">1600</p>
-        <p class="text1">2000</p>
+        <p class="text1 cat">Mythology</p>
+        <p class="text1 click" id="question6_cat4">200</p>
+        <p class="text1 click" id="question7_cat4">400</p>
+        <p class="text1 click" id="question8_cat4">600</p>
+        <p class="text1 click" id="question9_cat4">800</p>
+        <p class="text1 click" id="question10_cat4">1000</p>
       </div>
       <div class="cc column5">
-        <p class="text1 cat">Category</p>
-        <p class="text1">400</p>
-        <p class="text1">800</p>
-        <p class="text1">1200</p>
-        <p class="text1">1600</p>
-        <p class="text1">2000</p>
+        <p class="text1 cat">History</p>
+        <p class="text1 click" id="question6_cat5">200</p>
+        <p class="text1 click" id="question7_cat5">400</p>
+        <p class="text1 click" id="question8_cat5">600</p>
+        <p class="text1 click" id="question9_cat5">800</p>
+        <p class="text1 click" id="question10_cat5">1000</p>
       </div>
       <div class="cc column6">
-        <p class="text1 cat">Category</p>
-        <p class="text1">400</p>
-        <p class="text1">800</p>
-        <p class="text1">1200</p>
-        <p class="text1">1600</p>
-        <p class="text1">2000</p>
+        <p class="text1 cat">General</p>
+        <p class="text1 click" id="question6_cat6">200</p>
+        <p class="text1 click" id="question7_cat6">400</p>
+        <p class="text1 click" id="question8_cat6">600</p>
+        <p class="text1 click" id="question9_cat6">800</p>
+        <p class="text1 click" id="question10_cat6">1000</p>
       </div>
     </main>
-    <div class="usercont">
-      <input class="user" placeholder="User input..."></input>
-    </div>
-    <div class="twocont">
-    <div class="guesscont">
-      <a class="guess" href="">Guess</p>
-    </div>
-    <div class="passcont">
-      <a class="pass" href="">Pass</p>
-    </div>
-    </div>
     <div class="playercont">
-      <p class="player1">Player 1 Score: 0</p>
-      <p class="player2">Player 2 Score: 0</p>
+      <p class="player1">Player 1 Score
+        <span id="score1">0</span>
+      </p>
+      <p class="player2">Player 2 Score
+        <span id="score2">0</span>
+      </p>
     </div>
   <div class="more">
     <div class="nxtcont">
@@ -93,7 +86,18 @@
     </div>
   </div>
 
-    <!-- Do not change the script source. Allows import/export to work. -->
-    <script src="./scripts/index.js" type="module"></script>
+  <dialog id="diag">
+    <div id="diagquestion">test</div>
+    <div class="usercont">
+      <input id="user" placeholder="User input..."></input>
+    </div>
+    <div class="twocont">
+      <button class="diagf" id="guess">Guess</button>
+      <button class="diagf" id="pass">Pass</button>
+    </div>
+  </dialog>
+  
+  <!-- Do not change the script source. Allows import/export to work. -->
+    <script src="./scripts/round2.js"  type="module"></script>
   </body>
 </html>
