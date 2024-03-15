@@ -122,3 +122,10 @@ h1 {
   width: 50%;
   text-decoration: underline;
 }
+
+/* button no longer clickable after first clicked. pressing the button adds unclick class*/
+
+.unclick {
+  pointer-events: none;
+  background-color: black;
+}

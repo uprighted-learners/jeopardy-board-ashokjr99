@@ -19,7 +19,7 @@
       <p class="pfinal">Final Category</p>
     </div>
     <div class="quescont">
-      <p class="fq">Final Question</p>
+      <p id="fq">Final Round</p>
     </div>
     <!-- <div class="inputcont">
       <input class="inp" placeholder="Point bet amount..."></input>
@@ -38,16 +38,15 @@
     </div>
     <div class="lots">
       <div class="footercont">
-        <p class="footer">Privacy Notice</p>
-        <p class="footer">Contact</p>
+        <p class="footer">Footer 🙂</p>
       </div>
     </div>
     
-    
+    <!-- Dialog tags are for modals and are HIDDEN unless called in js -->
 
     <dialog id="diag1">
       <p id="bet1">Place your bet, Player 1.</p>
-        <input id="inp1" placeholder="Point bet amount..."></input>
+        <input type="number" id="inp1" placeholder="Point bet amount..."></input>
         <!-- <input id="answer" placeholder="Final answer..."></input> -->
         <button id="pcont1">Bet</button>
     </dialog>
@@ -56,27 +55,29 @@
 
 
     <dialog id="diag2">
-      <p id="bet2">Place your bet, Player 1.</p>
-      <input id="inp" placeholder="Point bet amount..."></input>
+      <p id="bet2">Place your bet, Player 2.</p>
+      <input id="inp2" placeholder="Point bet amount..."></input>
       <!-- <input id="answer" placeholder="Final answer..."></input> -->
-      <button id="pcont">Bet</button>
+      <button id="pcont2">Bet</button>
   </dialog>
 
 
 
   <dialog id="diag3">
-    <input id="inp" placeholder="Point bet amount..."></input>
+    <p class="finalQuestion"></p>
+    <input id="inp3" placeholder="Enter Your Answer">What's your answer, Player 1?</input>
     <!-- <input id="answer" placeholder="Final answer..."></input> -->
-    <button id="pcont">Bet</button>
+    <button id="pcont3">Submit</button>
 </dialog>
 
 
 
 
   <dialog id="diag4">
-    <input id="inp" placeholder="Point bet amount..."></input>
+    <p class="finalQuestion"></p>
+    <input id="inp4" placeholder="Enter Your Answer">What's your answer, Player 2?</input>
     <!-- <input id="answer" placeholder="Final answer..."></input> -->
-    <button id="pcont">Bet</button>
+    <button id="pcont4">Submit</button>
 </dialog>
 
 

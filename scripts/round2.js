@@ -64,6 +64,11 @@ duck.forEach((i) => {
     console.log(placeholderDig);
     console.log(placeholderDig.points);
     diagquestion.textContent = placeholderDig.question; // replaces text with question
+
+    i.classList.remove("click");
+    // removes click class
+    i.classList.add("unclick");
+    // adds class so that button is no longer clickable
   });
 });
 
