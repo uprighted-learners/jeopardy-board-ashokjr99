@@ -56,8 +56,33 @@ if (!isNaN(parseInt(score2Get))) {
   score2.textContent = score2Get;
 }
 
-//? show 1st modal instantly for player 1 bet
-modal1.showModal();
+// check to see if player 1 or 2 has points that are 0 or less. if one of them do, the game ends in the favor of the person who has points on the board. IF they both have 0 or less points, then both are losers.
+const firstCheckAndSeeIfPlayersHavePoints = () => {
+  if (parseInt(score1.textContent) <= 0) {
+    playerOneBet = 0;
+    alert(
+      `Since Player 1's score = ${score1.textContent}, your bet has been set to 0.`
+    );
+    if (parseInt(score2.textContent) <= 0) {
+      alert(
+        `Since Player 2's score = ${score2.textContent}, your bet has been set to 0.`
+      );
+      callWinner.textContent =
+        "Wow... You guys both have no points. You guys are both losers.";
+    } else {
+      callWinner.textContent = "By default, Player 2 wins.";
+    }
+  } else if (parseInt(score2.textContent) <= 0) {
+    alert(
+      `Since Player 2's score = ${score2.textContent}, your bet has been set to 0.`
+    );
+    callWinner.textContent = "By default, Player 1 wins.";
+  } else {
+    //? show 1st modal instantly for player 1 bet
+    modal1.showModal();
+  }
+};
+firstCheckAndSeeIfPlayersHavePoints();
 
 // click function for bet
 betForFirstPlayer.addEventListener("click", () => {
@@ -128,23 +153,28 @@ const whoWon = () => {
   console.log(answerInput1.value, "answerinput1");
   console.log(answerInput2.value, "answerinput2");
   console.log(finalQuestion.answer);
-  if (answerInput1.value === finalQuestion.answer) {
+  if (answerInput1.value.toLowerCase() === finalQuestion.answer.toLowerCase()) {
+    //to lowercase makes it so that answer casing and input casing matches
     playerOneFinalScore = playerOneBet + parseInt(score1.textContent);
     //parseint takes score1.textcontent and turns it into a number SO that playeronebet can add to it.
     // console.log(playerOneFinalScore);
     console.log("win");
   } else {
+    // if player 1 is wrong, subtract points
+    playerOneFinalScore = parseInt(score1.textContent) - playerOneBet;
     console.log("wrong");
   }
 
-  if (answerInput2.value === finalQuestion.answer) {
+  if (answerInput2.value.toLowerCase() === finalQuestion.answer.toLowerCase()) {
     playerTwoFinalScore = playerTwoBet + parseInt(score2.textContent);
     // console.log(playerTwoFinalScore);
     console.log("win");
   } else {
+    // if player 2 is wrong, subtract points
+    playerTwoFinalScore = parseInt(score2.textContent) - playerTwoBet;
     console.log("wrong");
   }
-
+  console.log("here");
   // compare and contrast player 1 and player 2 scores
   if (playerOneFinalScore > playerTwoFinalScore) {
     console.log("player one wins");
@@ -152,9 +182,8 @@ const whoWon = () => {
     callWinner.textContent = "Player 1 Wins";
   } else if (playerOneFinalScore < playerTwoFinalScore) {
     console.log("player two wins");
-    callWinner.textContent = "Player 1 Wins";
+    callWinner.textContent = "Player 2 Wins";
   } else {
-    console.log(draw);
     callWinner.textContent = "Draw";
   }
 };
@@ -166,4 +195,11 @@ const validateNumberInput = (input) => {
     throw new Error("Error: Numbers Only");
   }
   return numberCheck;
+};
+
+// function for if either player currently has a score of 0 or negative
+const handleCurrentNegativeAndZeroPoints = (specificPlayerScore, playerBet) => {
+  if (specificPlayerScore <= 0) {
+    playerBet = 0;
+  }
 };

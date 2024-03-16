@@ -15,13 +15,32 @@ if (!isNaN(parseInt(score2Get))) {
   score2.textContent = score2Get;
 }
 //--------------------------------
+
+// A counter to make sure that TWO passing and TWO incorrect answers results in a modal close
+let counter = 0;
+
+const updateCounter = () => {
+  counter++;
+
+  if (counter === 2) {
+    diag.close();
+    counter = 0;
+  }
+};
+
+//--------------------------------
+
 let currentTurn = "Player 1";
+let updateChangeTurnText = document.getElementById("smaller");
+
 // Player Turn change function
 function changeTurn() {
   if (currentTurn === "Player 1") {
     currentTurn = "Player 2";
+    updateChangeTurnText.textContent = "Player 2's Turn";
   } else {
     currentTurn = "Player 1";
+    updateChangeTurnText.textContent = "Player 1's Turn";
   }
   alert(`It is ${currentTurn} turn.`);
 }
@@ -43,8 +62,8 @@ console.log("reformatQuestions", reformatQuestions);
 
 let placeholderDig = null;
 
-let duck = document.querySelectorAll(".click"); // duck is every question/box
-duck.forEach((i) => {
+let fullBoard = document.querySelectorAll(".click"); // fullBoard is every question/box
+fullBoard.forEach((i) => {
   // i is each question/box
   i.addEventListener("click", () => {
     diag.showModal(); // shows my modal upon click
@@ -60,7 +79,8 @@ duck.forEach((i) => {
 
     // console.log(reformatQuestions[chosenCategory][quesChange].question);
     placeholderDig = reformatQuestions[chosenCategory][quesChange]; //allows me to go deeper into object and items
-    placeholderDig.points = quesChange * 200 + 200;
+    placeholderDig.points = (quesChange - 4) * 200;
+    // math for giving user the points when they answer correctly
     console.log(placeholderDig);
     console.log(placeholderDig.points);
     diagquestion.textContent = placeholderDig.question; // replaces text with question
@@ -80,27 +100,42 @@ let userInput = document.getElementById("user");
 
 guess.addEventListener("click", () => {
   console.log(placeholderDig.question);
-  console.log(userInput.value);
 
-  if (userInput.value === placeholderDig.answer) {
+  if (userInput.value.toLowerCase() === placeholderDig.answer.toLowerCase()) {
+    //to lowercase makes it so that answer casing and input casing matches
+    counter = 0;
     if (currentTurn === "Player 1") {
       score1.textContent = placeholderDig.points + parseInt(score1.textContent);
       diag.close();
-      window.localStorage.setItem("player1", placeholderDig.points);
+      window.localStorage.setItem("player1", parseInt(score1.textContent));
     } else {
       score2.textContent = placeholderDig.points + parseInt(score2.textContent);
       diag.close();
-      window.localStorage.setItem("player2", placeholderDig.points);
+      window.localStorage.setItem("player2", parseInt(score2.textContent));
     }
   } else {
-    diag.close();
+    // what happens if players guess incorrectly
+    subtractPoints();
+    updateCounter();
     changeTurn();
   }
 });
 
+const subtractPoints = () => {
+  // conditional will subtract points from their total
+  if (currentTurn === "Player 1") {
+    score1.textContent = parseInt(score1.textContent) - placeholderDig.points;
+    window.localStorage.setItem("player1", score1.textContent);
+  } else {
+    score2.textContent = parseInt(score2.textContent) - placeholderDig.points;
+    window.localStorage.setItem("player2", score2.textContent);
+  }
+};
+
 pass.addEventListener("click", () => {
   // adding click feature to button if user passes
-  diag.close();
+  // subtractPoints();
+  updateCounter();
   changeTurn();
 });
 
@@ -125,6 +160,3 @@ function questionSelector(splitQues) {
     }
   }
 }
-
-// const currentUrl = window.location.href;
-// console.log(currentUrl);

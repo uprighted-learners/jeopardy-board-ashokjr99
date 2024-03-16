@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(38, 56, 158);
+  background-color: rgb(204, 204, 255);
 }
 
 .top1 {
@@ -13,7 +13,7 @@ h1 {
   flex-direction: row;
   height: auto;
   justify-content: center;
-  color: white;
+  color: black;
 }
 
 .top1 {
@@ -39,14 +39,16 @@ h1 {
 
 .pfinal {
   display: flex;
-  background-color: lightgray;
-  padding: 0.5% 17%;
+  background-color: darkgray;
+  padding: 0.8% 17%;
+  font-size: larger;
 }
 
 .quescont {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: xx-large;
 }
 
 .fq {
@@ -76,21 +78,32 @@ h1 {
   align-items: center;
 }
 
-.pcont {
-  background-color: lightgray;
-  padding: 0.5% 1.5%;
+.player {
+  font-size: larger;
 }
+
 .lots {
   display: flex;
   justify-content: center;
 }
+
 .footercont {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1em;
-  margin-top: 10%;
-  background-color: lightgray;
+  margin-top: 20%;
+  background-color: darkgray;
   width: 50%;
   text-decoration: underline;
+}
+
+.tenor-gif-embed {
+  display: flex;
+  justify-items: center;
+  max-width: 25%;
+  margin-top: 5%;
+
+  margin-right: auto;
+  margin-left: auto;
 }

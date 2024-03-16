@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(38, 56, 158);
+  background-color: rgb(204, 204, 255);
 }
 
 .top1 {
@@ -13,7 +13,7 @@ h1 {
   flex-direction: row;
   height: auto;
   justify-content: center;
-  color: white;
+  color: black;
 }
 
 .top1 {
@@ -66,7 +66,7 @@ h1 {
   width: 10%;
 }
 
-.guess {
+#guess {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +79,7 @@ h1 {
   text-align: center;
 }
 
-.pass {
+#pass {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +91,8 @@ h1 {
   flex-direction: row;
   width: 80%;
   gap: 50vw;
-  color: gold;
+  font-size: larger;
+  color: black;
 }
 
 .more {
@@ -103,7 +104,7 @@ h1 {
 .nxtcont {
   display: flex;
   flex-direction: row;
-  background-color: lightgray;
+  background-color: darkgray;
   justify-content: center;
   padding: 1.5%;
 }
@@ -118,7 +119,7 @@ h1 {
   justify-content: center;
   gap: 1em;
   margin-top: 10%;
-  background-color: lightgray;
+  background-color: darkgray;
   width: 50%;
   text-decoration: underline;
 }
