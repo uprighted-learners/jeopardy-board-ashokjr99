@@ -12,16 +12,15 @@
     <div class="top1">
       <h1 class="bigger">Final Round</h1>
     </div>
-    <!-- <div class="top2">
-      <h1 class="smaller">Player Turn</h1>
-    </div> -->
     <div class="fincont">
       <p class="pfinal">Final Category</p>
     </div>
     <div class="quescont">
+      <!-- final round will textContent into who wins or loses once bets and question modals are fulfilled -->
       <p id="fq">Final Round</p>
     </div>
     <div class="playercont">
+      <!-- scores will come from local storage on machine -->
       <p class="player">Player 1 Score
         <span id="score1">0</span>
       </p>
@@ -30,6 +29,7 @@
       </p>
     </div>
     <div id="insertGif">
+      <!-- gif will be created as an image tag in final.js and be appended here depending on win or lose/draw -->
     </div>
     <div class="lots">
       <div class="footercont">
@@ -39,39 +39,37 @@
     
     <!-- Dialog tags are for modals and are HIDDEN unless called in js -->
 
+<!-- first modal for player 1 bet -->
     <dialog id="diag1">
       <p id="bet1">Place your bet, Player 1.</p>
         <input type="number" id="inp1" placeholder="Point bet amount..."></input>
-        <!-- <input id="answer" placeholder="Final answer..."></input> -->
+
         <button id="pcont1">Bet</button>
     </dialog>
 
 
 
-
+<!-- second modal for player 2 bet -->
     <dialog id="diag2">
       <p id="bet2">Place your bet, Player 2.</p>
       <input id="inp2" placeholder="Point bet amount..."></input>
-      <!-- <input id="answer" placeholder="Final answer..."></input> -->
       <button id="pcont2">Bet</button>
   </dialog>
 
 
-
+<!-- third modal for player 1 question and answer -->
   <dialog id="diag3">
     <p class="finalQuestion"></p>
     <input id="inp3" placeholder="Enter Your Answer">What's your answer, Player 1?</input>
-    <!-- <input id="answer" placeholder="Final answer..."></input> -->
     <button id="pcont3">Submit</button>
 </dialog>
 
 
 
-
+<!-- final modal for player 4 question and answer -->
   <dialog id="diag4">
     <p class="finalQuestion"></p>
     <input id="inp4" placeholder="Enter Your Answer">What's your answer, Player 2?</input>
-    <!-- <input id="answer" placeholder="Final answer..."></input> -->
     <button id="pcont4">Submit</button>
 </dialog>
 
