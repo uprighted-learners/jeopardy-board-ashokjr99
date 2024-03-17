@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Jeopardy</title>
+    <link rel="stylesheet" href="./final-jeoparddy.css" />
+
+  </head>
+  <body>
+    <div class="top1">
+      <h1 class="bigger">Final Round</h1>
+    </div>
+    <div class="fincont">
+      <p class="pfinal">Final Category</p>
+    </div>
+    <div class="quescont">
+      <!-- final round will textContent into who wins or loses once bets and question modals are fulfilled -->
+      <p id="fq">Final Round</p>
+    </div>
+    <div class="playercont">
+      <!-- scores will come from local storage on machine -->
+      <p class="player">Player 1 Score
+        <span id="score1">0</span>
+      </p>
+      <p class="player">Player 2 Score
+        <span id="score2">0</span>
+      </p>
+    </div>
+    <div id="insertGif">
+      <!-- gif will be created as an image tag in final.js and be appended here depending on win or lose/draw -->
+    </div>
+    <div class="lots">
+      <div class="footercont">
+        <p class="footer">Footer 🙂</p>
+      </div>
+    </div>
+    
+    <!-- Dialog tags are for modals and are HIDDEN unless called in js -->
+
+<!-- first modal for player 1 bet -->
+    <dialog id="diag1">
+      <p id="bet1">Place your bet, Player 1.</p>
+        <input type="number" id="inp1" placeholder="Point bet amount..."></input>
+
+        <button id="pcont1">Bet</button>
+    </dialog>
+
+
+
+<!-- second modal for player 2 bet -->
+    <dialog id="diag2">
+      <p id="bet2">Place your bet, Player 2.</p>
+      <input id="inp2" placeholder="Point bet amount..."></input>
+      <button id="pcont2">Bet</button>
+  </dialog>
+
+
+<!-- third modal for player 1 question and answer -->
+  <dialog id="diag3">
+    <p class="finalQuestion"></p>
+    <input id="inp3" placeholder="Enter Your Answer">What's your answer, Player 1?</input>
+    <button id="pcont3">Submit</button>
+</dialog>
+
+
+
+<!-- final modal for player 4 question and answer -->
+  <dialog id="diag4">
+    <p class="finalQuestion"></p>
+    <input id="inp4" placeholder="Enter Your Answer">What's your answer, Player 2?</input>
+    <button id="pcont4">Submit</button>
+</dialog>
+
+
+
+
+    <!-- Do not change the script source. Allows import/export to work. -->
+    <script src="../scripts/final.js" type="module"></script>
+  </body>
+</html>

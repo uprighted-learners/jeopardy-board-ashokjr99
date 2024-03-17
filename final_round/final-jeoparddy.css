@@ -1,0 +1,109 @@
+body {
+  background-color: rgb(204, 204, 255);
+}
+
+.top1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: center;
+  color: black;
+}
+
+.top1 {
+  font-size: 5rem;
+}
+
+.top2 {
+  font-size: 2rem;
+}
+
+.top2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fincont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.pfinal {
+  display: flex;
+  background-color: darkgray;
+  padding: 0.8% 17%;
+  font-size: larger;
+}
+
+.quescont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
+
+.fq {
+  border: 1px black solid;
+  padding: 8% 17%;
+  color: white;
+}
+
+.inputcont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 4em 0 1em;
+}
+
+.inp {
+  height: 3vh;
+  width: 15%;
+}
+
+.cont1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  font-size: larger;
+}
+
+.lots {
+  display: flex;
+  justify-content: center;
+}
+
+.footercont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 20%;
+  background-color: darkgray;
+  width: 50%;
+  text-decoration: underline;
+}
+
+#insertGif {
+  display: flex;
+  justify-items: center;
+  max-width: 25%;
+  margin-top: 5%;
+
+  margin-right: auto;
+  margin-left: auto;
+}

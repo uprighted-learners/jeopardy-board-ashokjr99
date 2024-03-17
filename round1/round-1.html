@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeopardy</title>
+    <link rel="stylesheet" href="./round-1.css" />
+  </head>
+  <body>
+    <div class="top1">
+      <h1 class="bigger">Round One</h1>
+    </div>
+    <!-- Click a box will textContent into a player one's or player two's turn once functioning -->
+    <div class="top2">
+      <h1 id="smaller">Click A Box!</h1>
+    </div>
+    <!-- this houses the entire board for the jeopardy board and its questions -->
+    <main class="bodygrid">
+      <div class="cc column1">
+        <p class="text1 cat">Nature</p>
+        <p class="text1 click" id="question1_cat1">100</p>
+        <p class="text1 click" id="question2_cat1">200</p>
+        <p class="text1 click" id="question3_cat1">300</p>
+        <p class="text1 click" id="question4_cat1">400</p>
+        <p class="text1 click" id="question5_cat1">500</p>
+      </div>
+      <div class="cc column2">
+        <p class="text1 cat">Animals</p>
+        <p class="text1 click" id="question1_cat2">100</p>
+        <p class="text1 click" id="question2_cat2">200</p>
+        <p class="text1 click" id="question3_cat2">300</p>
+        <p class="text1 click" id="question4_cat2">400</p>
+        <p class="text1 click" id="question5_cat2">500</p>
+      </div>
+      <div class="cc column3">
+        <p class="text1 cat">Computers</p>
+        <p class="text1 click" id="question1_cat3">100</p>
+        <p class="text1 click" id="question2_cat3">200</p>
+        <p class="text1 click" id="question3_cat3">300</p>
+        <p class="text1 click" id="question4_cat3">400</p>
+        <p class="text1 click" id="question5_cat3">500</p>
+      </div>
+      <div class="cc column4">
+        <p class="text1 cat">Mythology</p>
+        <p class="text1 click" id="question1_cat4">100</p>
+        <p class="text1 click" id="question2_cat4">200</p>
+        <p class="text1 click" id="question3_cat4">300</p>
+        <p class="text1 click" id="question4_cat4">400</p>
+        <p class="text1 click" id="question5_cat4">500</p>
+      </div>
+      <div class="cc column5">
+        <p class="text1 cat">History</p>
+        <p class="text1 click" id="question1_cat5">100</p>
+        <p class="text1 click" id="question2_cat5">200</p>
+        <p class="text1 click" id="question3_cat5">300</p>
+        <p class="text1 click" id="question4_cat5">400</p>
+        <p class="text1 click" id="question5_cat5">500</p>
+      </div>
+      <div class="cc column6">
+        <p class="text1 cat">General</p>
+        <p class="text1 click" id="question1_cat6">100</p>
+        <p class="text1 click" id="question2_cat6">200</p>
+        <p class="text1 click" id="question3_cat6">300</p>
+        <p class="text1 click" id="question4_cat6">400</p>
+        <p class="text1 click" id="question5_cat6">500</p>
+      </div>
+    </main>
+       <!-- scores will update to whatever is stored in local storage on the machine -->
+    <div class="playercont">
+      <p class="player1">Player 1 Score
+        <span id="score1">0</span>
+      </p>
+      <p class="player2">Player 2 Score
+        <span id="score2">0</span>
+      </p>
+    </div>
+  <div class="more">
+    <div class="nxtcont">
+      <!-- button for next round -->
+      <a class="nxtrd" href="../round2/round-2.html">
+        Next Round
+      </a>
+  </div>
+    </div>
+  <div class="lots">
+    <div class="footercont">
+      <p class="footer">Footer 🙂</p>
+    </div>
+  </div>
+
+  <dialog id="diag">
+    <!-- diag houses the modal for the questions from each box on the board -->
+    <div id="diagquestion">test</div>
+    <div class="usercont">
+      <input id="user" placeholder="User input..."></input>
+    </div>
+    <div class="twocont">
+          <!-- houses pass or guess buttons for questions -->
+      <button class="diagf" id="guess">Guess</button>
+      <button class="diagf" id="pass">Pass</button>
+    </div>
+  </dialog>
+  
+  <!-- Do not change the script source. Allows import/export to work. -->
+    <script src="../scripts/round1.js"  type="module"></script>
+  </body>
+</html>
