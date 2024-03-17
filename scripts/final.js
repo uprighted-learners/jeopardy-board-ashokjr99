@@ -38,6 +38,20 @@ let playerTwoFinalScore = 0;
 // Grabbing ahold of final round element so it can display the winner at the end of the game
 let callWinner = document.getElementById("fq");
 
+// gif for whoever wins
+let gifHolder = document.getElementById("insertGif");
+let winnerGif = document.createElement("img");
+winnerGif.setAttribute(
+  "src",
+  "https://media1.tenor.com/m/d7H8tqAvpaoAAAAd/among-us-tweark.gif"
+);
+
+let loserOrDrawGif = document.createElement("img");
+loserOrDrawGif.setAttribute(
+  "src",
+  "https://media1.tenor.com/m/VNlo9wZpYvsAAAAd/bruh.gif"
+);
+
 //------------------------------------ local storage to make sure reloads do not erase data
 let score1 = document.getElementById("score1");
 let score2 = document.getElementById("score2");
@@ -68,7 +82,8 @@ const firstCheckAndSeeIfPlayersHavePoints = () => {
         `Since Player 2's score = ${score2.textContent}, your bet has been set to 0.`
       );
       callWinner.textContent =
-        "Wow... You guys both have no points. You guys are both losers.";
+        "Wow... Both players have no points. You both lose.";
+      gifHolder.appendChild(loserOrDrawGif);
     } else {
       callWinner.textContent = "By default, Player 2 wins.";
     }
@@ -180,11 +195,14 @@ const whoWon = () => {
     console.log("player one wins");
     console.log(callWinner);
     callWinner.textContent = "Player 1 Wins";
+    gifHolder.appendChild(winnerGif);
   } else if (playerOneFinalScore < playerTwoFinalScore) {
     console.log("player two wins");
     callWinner.textContent = "Player 2 Wins";
+    gifHolder.appendChild(winnerGif);
   } else {
     callWinner.textContent = "Draw";
+    gifHolder.appendChild(loserOrDrawGif);
   }
 };
 

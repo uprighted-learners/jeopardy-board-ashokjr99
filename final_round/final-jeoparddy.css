@@ -98,7 +98,7 @@ h1 {
   text-decoration: underline;
 }
 
-.tenor-gif-embed {
+#insertGif {
   display: flex;
   justify-items: center;
   max-width: 25%;
